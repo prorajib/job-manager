@@ -1,9 +1,10 @@
 import mongoose from 'mongoose';
 import validator from 'validator';
+
 const userSchema = new mongoose.Schema({
   name: {
     type: String,
-    requied: [true, 'Please provide name!'],
+    required: [true, 'Please provide Name!'],
     minlength: 3,
     maxlength: 20,
     trim: true,
@@ -18,7 +19,6 @@ const userSchema = new mongoose.Schema({
 
     unique: true,
   },
-
   password: {
     type: String,
     required: [true, 'Please provide password'],
